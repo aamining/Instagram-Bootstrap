@@ -40,6 +40,10 @@
               <%= link_to "New Post", new_post_path %>
             </li>
             <% if current_user%>
+            <li>
+            <%= link_to "Log out", destroy_user_session_path,
+            method: :delete, confirm: "Are you sure?" %>
+          </li>
             <%else%>
             <%end%>
             <li>
@@ -71,6 +75,6 @@
     <!- Bootstrap core JavaScript -->
     <!-- <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script> --> 
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
   </body>
 </html>

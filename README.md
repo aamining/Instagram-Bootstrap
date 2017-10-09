@@ -59,7 +59,7 @@ Require Bootstrap Javascripts in app/assets/javascripts/application.js:
 17- How to make a form for "posts"
 - views>layouts>posts>new.html.erb
 
-* <h1>New Post</h1>
+* New Post ( in <h1>)
 * <%= form_for @post do |f| %>
 * <%= f.label :description %>
 * <%= f.text_area :description %>
@@ -69,3 +69,63 @@ Require Bootstrap Javascripts in app/assets/javascripts/application.js:
 
 -controllers>post_controller.rb
 * @post = Post.new
+
+18- Ability to sign out:
+* <% if current_user%>
+* <li>
+* <%= link_to "Log out", destroy_user_session_path,
+* method: :delete, confirm: "Are you sure?" %>
+* </li>
+* <%else%>
+* <%end%>
+
+19- gem "paperclip", "~> 5.0.0"
+20- rails g paperclip post image  and then rake db:migrate
+21- models.post.rb=>
+<!-- has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" },       default_url: "/images/:style/missing.png"
+validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/ -->
+
+* change all avatar to image and resolution to 500*500
+
+22- view> posts> new.html.erb
+<!-- <h1>New Post</h1>
+
+<%= form_for @post, html: {multipart: true} do |f| %>
+<%= f.label :image%>
+<%= f.file_field :image%>
+<br>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<br>
+<%= f.submit%>
+<% end%> -->
+
+23-controllers>post_controller.rb
+
+  <!-- def new
+    @post = Post.new
+  end
+
+  def index
+  end
+
+  def show
+  end
+
+  def create
+    @post=Post.new(permit_post)
+    if @post.save
+      flash[:success] = "Success!"
+      redirect_to post_path(@post)
+    else
+      flash[:error] = @post.errors.full_messages
+      redirect_to new_post_path
+    end
+  end
+  private
+  def permit_post
+    params.require(:post).permit(:image, :description)
+  end
+end
+ -->
+24- 
