@@ -41,5 +41,17 @@ Require Bootstrap Javascripts in app/assets/javascripts/application.js:
 14- rails g controller Posts new index show
 
 15- Routes add :
-root 'post#index'
-resources :posts
+* root 'post#index'
+* resources :posts
+
+16- add and change navbar (application.html.rb) like these:
+* add : <%= link_to "instagram", root_url, class:"navbar-brand"%>
+* add : <%= link_to "New Post", new_post_path %>
+* add :
+* <% if current_user%>
+* <%else%>
+* <%end%>
+* add : <%= link_to "Login", new_user_session_path %>
+* add : <%= link_to "Register", new_user_registration_path %>
+* remove useless link
+* to find the path of the links do not forget to see: rails routes
