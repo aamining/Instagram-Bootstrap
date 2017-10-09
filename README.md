@@ -55,3 +55,17 @@ Require Bootstrap Javascripts in app/assets/javascripts/application.js:
 * add : <%= link_to "Register", new_user_registration_path %>
 * remove useless link
 * to find the path of the links do not forget to see: rails routes
+
+17- How to make a form for "posts"
+- views>layouts>posts>new.html.erb
+
+* <h1>New Post</h1>
+* <%= form_for @post do |f| %>
+* <%= f.label :description %>
+* <%= f.text_area :description %>
+* <br>
+* <%= f.submit%>
+* <% end%>
+
+-controllers>post_controller.rb
+* @post = Post.new
