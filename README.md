@@ -92,14 +92,19 @@ resources :posts
 ```
 19- gem "paperclip", "~> 5.0.0"
 20- rails g paperclip post image  and then rake db:migrate
-21- models.post.rb=>
+
+21- In models > post.rb
+
 ```
 has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" },       default_url: "/images/:style/missing.png"
 validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 ```
 * change all avatar to image and resolution to 500*500
 
+21- models.post.rb=>
+
 22- view> posts> new.html.erb
+
 ```
 <h1>New Post</h1>
 
@@ -142,4 +147,24 @@ validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   end
 end
 ```
-24-
+24- Update posts > show.html.erb
+
+```
+<%=image_tag(@posts.image.url(:medium))%>
+<br>
+<%= @posts.description %>
+
+```
+25- Update posts > index.html.erb
+
+```
+<% @posts.each do |x| %>
+<div class="show_all">
+  <%=image_tag x.image.url(:medium) %>
+  <br>
+  <%= x.description %>
+  
+</div>
+<%end%>
+
+```
