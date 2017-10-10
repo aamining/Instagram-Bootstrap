@@ -8,7 +8,12 @@ To Build an Instagram
 
 2-rails generate devise:install
 
-3- Copy config.action_mailer.default_url_options = { host: 'localhost', port: 3000 } in to :config/environments/development.rb
+3- Copy in to :config/environments/development.rb
+
+```
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+```
 
 4- rails g devise User
 
