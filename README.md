@@ -97,6 +97,7 @@ resources :posts
 * <%end%>
 ```
 19- gem "paperclip", "~> 5.0.0"
+
 20- rails g paperclip post image  and then rake db:migrate
 
 21- In models > post.rb
