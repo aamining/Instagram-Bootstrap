@@ -7,7 +7,10 @@ To Build an Instagram
 
 <img src="https://github.com/aamining/Instagram-Bootstrap/blob/master/ERD.png"/>
 
+```
 1- copy gem 'devise' to gem file , bundle install
+
+```
 
 2-rails generate devise:install
 
