@@ -76,13 +76,13 @@ resources :posts
 17- How to make a form for "posts"
 * views>layouts>posts>new.html.erb
 ```
-* New Post ( in <h1>)
-* <%= form_for @post do |f| %>
-* <%= f.label :description %>
-* <%= f.text_area :description %>
-* <br>
-* <%= f.submit%>
-* <% end%>
+ <h1> New Post </h1> 
+<%= form_for @post do |f| %>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<br>
+<%= f.submit%>
+<% end%>
 ```
 * controllers>post_controller.rb
 ```
