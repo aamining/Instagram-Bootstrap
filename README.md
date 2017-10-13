@@ -1,7 +1,9 @@
 
 # README
 
-To Build an Instagram
+Scope of work:
+
+To build an Instagram and using bootstarp 
 
 [![Gem Version](https://img.shields.io/gem/v/guard.svg?style=flat)](https://rubygems.org/gems/guard) [![Build Status](https://travis-ci.org/guard/guard.svg?branch=master)](https://travis-ci.org/guard/guard) [![Dependency Status](https://gemnasium.com/guard/guard.svg)](https://gemnasium.com/guard/guard) [![Code Climate](https://codeclimate.com/github/guard/guard/badges/gpa.svg)](https://codeclimate.com/github/guard/guard) [![Test Coverage](https://codeclimate.com/github/guard/guard/badges/coverage.svg)](https://codeclimate.com/github/guard/guard) [![Inline docs](http://inch-ci.org/github/guard/guard.svg)](http://inch-ci.org/github/guard/guard)
 
