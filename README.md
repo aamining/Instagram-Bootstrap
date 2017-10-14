@@ -22,7 +22,7 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
 4- rails g devise User
 
-5- rake db:migrate (because of Devise mailer)
+5- rake db:migrate 
 
 6- gem 'bootstrap-sass', '~> 3.3.6'  from git , bundle install
 
